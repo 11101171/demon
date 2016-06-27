@@ -1,0 +1,120 @@
+[2016-06-26 15:24:00] [ERROR] [main] [org.springframework.boot.SpringApplication:827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: article
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.demon.DemonAdminApplication.main(DemonAdminApplication.java:31)
+Caused by: org.hibernate.HibernateException: Missing table: article
+	at org.hibernate.cfg.Configuration.validateSchema(Configuration.java:1335)
+	at org.hibernate.tool.hbm2ddl.SchemaValidator.validate(SchemaValidator.java:175)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:525)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1859)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:343)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 16 common frames omitted
+[2016-06-26 15:28:57] [ERROR] [main] [org.springframework.boot.SpringApplication:827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing column: img_link in boot.turn_img
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.demon.DemonAdminApplication.main(DemonAdminApplication.java:31)
+Caused by: org.hibernate.HibernateException: Missing column: img_link in boot.turn_img
+	at org.hibernate.mapping.Table.validateColumns(Table.java:366)
+	at org.hibernate.cfg.Configuration.validateSchema(Configuration.java:1338)
+	at org.hibernate.tool.hbm2ddl.SchemaValidator.validate(SchemaValidator.java:175)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:525)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1859)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:343)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 16 common frames omitted
+[2016-06-26 15:30:21] [ERROR] [main] [org.springframework.boot.SpringApplication:827] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing column: img_link in boot.turn_img
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:829)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.demon.DemonAdminApplication.main(DemonAdminApplication.java:31)
+Caused by: org.hibernate.HibernateException: Missing column: img_link in boot.turn_img
+	at org.hibernate.mapping.Table.validateColumns(Table.java:366)
+	at org.hibernate.cfg.Configuration.validateSchema(Configuration.java:1338)
+	at org.hibernate.tool.hbm2ddl.SchemaValidator.validate(SchemaValidator.java:175)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:525)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1859)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:425)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:849)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:343)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:319)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 16 common frames omitted
+[2016-06-26 15:39:03] [ERROR] [http-nio-8082-exec-3] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 15:39:05] [ERROR] [http-nio-8082-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 15:39:09] [ERROR] [http-nio-8082-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 15:39:19] [ERROR] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Field 'id' doesn't have a default value
+[2016-06-26 15:40:03] [ERROR] [http-nio-8082-exec-2] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Field 'id' doesn't have a default value
+[2016-06-26 15:46:58] [ERROR] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Field 'id' doesn't have a default value
+[2016-06-26 15:47:48] [ERROR] [http-nio-8082-exec-3] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Field 'id' doesn't have a default value
+[2016-06-26 15:48:17] [ERROR] [http-nio-8082-exec-5] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Field 'id' doesn't have a default value
+[2016-06-26 15:48:19] [ERROR] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Field 'id' doesn't have a default value
+[2016-06-26 15:49:26] [ERROR] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Field 'id' doesn't have a default value
+[2016-06-26 15:51:03] [ERROR] [http-nio-8082-exec-4] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 15:55:16] [ERROR] [http-nio-8082-exec-7] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 15:55:22] [ERROR] [http-nio-8082-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 15:58:23] [ERROR] [http-nio-8082-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 16:14:16] [ERROR] [http-nio-8082-exec-4] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/exception.json.html' in any resource loader.
+[2016-06-26 16:20:11] [ERROR] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:146] - Duplicate entry 'zhong' for key 'login_username'

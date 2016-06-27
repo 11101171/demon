@@ -7,12 +7,11 @@
     <artifactId>demon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.demon</groupId>
   <artifactId>demon-web</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>demon-web Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <packaging>jar</packaging>
+   <properties>
+        <start-class>com.demon.DemonWebApplication</start-class>
+    </properties>
   <dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -26,16 +25,33 @@
 		<dependency>
 			<groupId>com.demon</groupId>
 			<artifactId>demon-bean</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.demon</groupId>
 			<artifactId>demon-dao</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.demon</groupId>
+			<artifactId>demon-core</artifactId>
 		</dependency>
   </dependencies>
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				 <configuration>
+			        <mainClass>${start-class}</mainClass>
+			        <layout>ZIP</layout>
+			      </configuration>
+			      <executions>
+			        <execution>
+			          <goals>
+			            <goal>repackage</goal>
+			          </goals>
+			        </execution>
+			      </executions>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

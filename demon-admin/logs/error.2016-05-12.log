@@ -1,0 +1,41 @@
+[2016-05-12 21:47:22] [ERROR] [http-nio-8080-exec-7] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:47:25] [ERROR] [http-nio-8080-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:47:34] [ERROR] [http-nio-8080-exec-4] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:47:36] [ERROR] [http-nio-8080-exec-3] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:47:38] [ERROR] [http-nio-8080-exec-2] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:47:38] [ERROR] [http-nio-8080-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:47:40] [ERROR] [http-nio-8080-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:22] [ERROR] [http-nio-8080-exec-10] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:24] [ERROR] [http-nio-8080-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:25] [ERROR] [http-nio-8080-exec-3] [org.apache.velocity:96] - Right side ($!{PAGER_CENTER}) of '<' operation has null value at global_library.vm[line 50, column 31]
+[2016-05-12 21:59:25] [ERROR] [http-nio-8080-exec-3] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:26] [ERROR] [http-nio-8080-exec-5] [org.apache.velocity:96] - Right side ($!{PAGER_CENTER}) of '<' operation has null value at global_library.vm[line 50, column 31]
+[2016-05-12 21:59:26] [ERROR] [http-nio-8080-exec-5] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:27] [ERROR] [http-nio-8080-exec-9] [org.apache.velocity:96] - Right side ($!{PAGER_CENTER}) of '<' operation has null value at global_library.vm[line 50, column 31]
+[2016-05-12 21:59:27] [ERROR] [http-nio-8080-exec-9] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:28] [ERROR] [http-nio-8080-exec-2] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:36] [ERROR] [http-nio-8080-exec-3] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:37] [ERROR] [http-nio-8080-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:38] [ERROR] [http-nio-8080-exec-10] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:39] [ERROR] [http-nio-8080-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:39] [ERROR] [http-nio-8080-exec-1] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:39] [ERROR] [http-nio-8080-exec-5] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:40] [ERROR] [http-nio-8080-exec-7] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:40] [ERROR] [http-nio-8080-exec-3] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:40] [ERROR] [http-nio-8080-exec-9] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:40] [ERROR] [http-nio-8080-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:41] [ERROR] [http-nio-8080-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 21:59:41] [ERROR] [http-nio-8080-exec-4] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:00:30] [ERROR] [http-nio-8080-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:00:32] [ERROR] [http-nio-8080-exec-7] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:00:36] [ERROR] [http-nio-8080-exec-9] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:00:48] [ERROR] [http-nio-8080-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:31:34] [ERROR] [http-nio-8080-exec-4] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:31:36] [ERROR] [http-nio-8080-exec-10] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:31:39] [ERROR] [http-nio-8080-exec-9] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:32:28] [ERROR] [http-nio-8080-exec-2] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:32:30] [ERROR] [http-nio-8080-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:39:00] [ERROR] [http-nio-8080-exec-10] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:39:40] [ERROR] [http-nio-8080-exec-6] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:41:03] [ERROR] [http-nio-8080-exec-8] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.
+[2016-05-12 22:41:05] [ERROR] [http-nio-8080-exec-5] [org.apache.velocity:96] - ResourceManager : unable to find resource 'error/404.json.html' in any resource loader.

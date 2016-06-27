@@ -19,6 +19,11 @@ package com.demon;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+* <p></p>
+* @author ningzhong.zeng
+*
+ */
 @SpringBootApplication
 public class DemonWebApplication {
 

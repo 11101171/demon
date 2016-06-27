@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_DIR" value="logs" />
+	
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%-5level] [%thread] [%logger:%line] - %msg%n</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="APP_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/info.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_DIR}/info.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%thread] [%C-%L] - %msg%n</Pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+        	<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="APP_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_DIR}/error.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%-5level] [%thread] [%logger:%line] - %msg%n</Pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>  
+        	<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+	
+	<appender name="APP_WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/warn.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_DIR}/warn.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%-5level] [%thread] [%logger:%line] - %msg%n</Pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>WARN</level>
+			<onMatch>ACCEPT</onMatch>  
+        	<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<root>
+		<level value="info" />
+        <appender-ref ref="APP_INFO" />
+        <appender-ref ref="APP_ERROR" />
+        <appender-ref ref="APP_WARN" />
+        <appender-ref ref="STDOUT" />
+	</root>
+</configuration>

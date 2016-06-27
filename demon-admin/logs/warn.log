@@ -1,0 +1,27 @@
+[2016-06-26 15:24:00] [WARN ] [main] [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing table: article
+[2016-06-26 15:28:57] [WARN ] [main] [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing column: img_link in boot.turn_img
+[2016-06-26 15:30:21] [WARN ] [main] [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Missing column: img_link in boot.turn_img
+[2016-06-26 15:39:19] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1364, SQLState: HY000
+[2016-06-26 15:39:19] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1364, SQLState: HY000
+[2016-06-26 15:39:19] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Field 'id' doesn't have a default value
+[2016-06-26 15:40:03] [WARN ] [http-nio-8082-exec-2] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1364, SQLState: HY000
+[2016-06-26 15:40:03] [WARN ] [http-nio-8082-exec-2] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1364, SQLState: HY000
+[2016-06-26 15:40:03] [WARN ] [http-nio-8082-exec-2] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Field 'id' doesn't have a default value
+[2016-06-26 15:46:58] [WARN ] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1364, SQLState: HY000
+[2016-06-26 15:46:58] [WARN ] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1364, SQLState: HY000
+[2016-06-26 15:46:58] [WARN ] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Field 'id' doesn't have a default value
+[2016-06-26 15:47:48] [WARN ] [http-nio-8082-exec-3] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1364, SQLState: HY000
+[2016-06-26 15:47:48] [WARN ] [http-nio-8082-exec-3] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1364, SQLState: HY000
+[2016-06-26 15:47:48] [WARN ] [http-nio-8082-exec-3] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Field 'id' doesn't have a default value
+[2016-06-26 15:48:17] [WARN ] [http-nio-8082-exec-5] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1364, SQLState: HY000
+[2016-06-26 15:48:17] [WARN ] [http-nio-8082-exec-5] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1364, SQLState: HY000
+[2016-06-26 15:48:17] [WARN ] [http-nio-8082-exec-5] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Field 'id' doesn't have a default value
+[2016-06-26 15:48:19] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1364, SQLState: HY000
+[2016-06-26 15:48:19] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1364, SQLState: HY000
+[2016-06-26 15:48:19] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Field 'id' doesn't have a default value
+[2016-06-26 15:49:26] [WARN ] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1364, SQLState: HY000
+[2016-06-26 15:49:26] [WARN ] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1364, SQLState: HY000
+[2016-06-26 15:49:26] [WARN ] [http-nio-8082-exec-1] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Field 'id' doesn't have a default value
+[2016-06-26 16:20:11] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:144] - SQL Error: 1062, SQLState: 23000
+[2016-06-26 16:20:11] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:232] - SQL Warning Code: 1062, SQLState: 23000
+[2016-06-26 16:20:11] [WARN ] [http-nio-8082-exec-7] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper:233] - Duplicate entry 'zhong' for key 'login_username'

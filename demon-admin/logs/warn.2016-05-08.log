@@ -1,0 +1,20 @@
+[2016-05-08 17:23:21] [WARN ] [main] [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext:546] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'adminAuthController' method 
+public java.lang.String com.demon.controller.AdminAuthController.loginPost()
+to {[/login],methods=[GET]}: There is already 'adminAuthController' bean method
+public java.lang.String com.demon.controller.AdminAuthController.loginGet() mapped.
+[2016-05-08 20:33:50] [WARN ] [http-nio-8080-exec-7] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 20:34:11] [WARN ] [http-nio-8080-exec-2] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 20:34:28] [WARN ] [http-nio-8080-exec-5] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 20:35:18] [WARN ] [http-nio-8080-exec-7] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 20:36:01] [WARN ] [http-nio-8080-exec-2] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:06:30] [WARN ] [http-nio-8080-exec-3] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:06:44] [WARN ] [http-nio-8080-exec-7] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:18:35] [WARN ] [http-nio-8080-exec-1] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:19:58] [WARN ] [http-nio-8080-exec-2] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:20:24] [WARN ] [http-nio-8080-exec-6] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:21:27] [WARN ] [http-nio-8080-exec-8] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:22:34] [WARN ] [http-nio-8080-exec-7] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:22:38] [WARN ] [http-nio-8080-exec-1] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 21:24:00] [WARN ] [http-nio-8080-exec-2] [org.springframework.web.servlet.PageNotFound:208] - Request method 'POST' not supported
+[2016-05-08 22:17:51] [WARN ] [http-nio-8080-exec-5] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:354] - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type [java.lang.String] to required type [java.lang.Long]; nested exception is java.lang.NumberFormatException: For input string: "null"
+[2016-05-08 22:20:12] [WARN ] [http-nio-8080-exec-10] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:354] - Failed to bind request element: org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type [java.lang.String] to required type [java.lang.Long]; nested exception is java.lang.NumberFormatException: For input string: "add"

@@ -1,0 +1,15 @@
+[2016-06-12 23:31:55] [WARN ] [main] [org.hibernate.engine.jdbc.internal.JdbcServicesImpl:204] - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2016-06-12 23:32:57] [WARN ] [main] [org.hibernate.engine.jdbc.internal.JdbcServicesImpl:204] - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2016-06-12 23:34:42] [WARN ] [main] [org.hibernate.engine.jdbc.internal.JdbcServicesImpl:204] - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2016-06-12 23:41:03] [WARN ] [main] [org.hibernate.engine.jdbc.internal.JdbcServicesImpl:204] - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2016-06-12 23:44:45] [WARN ] [main] [org.hibernate.engine.jdbc.internal.JdbcServicesImpl:204] - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.

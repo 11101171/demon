@@ -1,0 +1,200 @@
+== demon
+基础架构,包含
+
+* demon-bean[基础实体类，工具类]
+* demon-dao[orm,业务类]
+* demon-core[核心组件]
+* demon-admin[web后台管理 网页web版]
+* demon-web[PC 网页web版]
+* demon-web-wap[手机 网页web版]
+
+
+
+
+== Web 版
+web 主要提供链接路由，前端数据交互
+
+* spring-boot 配置 resource/application.properties
+* 代码路由目录 com.demon,com.demon.controller
+* 静态文件目录 resource/static
+* html 目录   resource/templates
+* vm宏        resource/global_library.vm
+
+
+==== com.demon.controller 
+路由控制器
+
+====  AdminWelcome
+欢迎页面控制器
+
+==== AdminTableController
+示例：后台管理控制器
+
+==== AdminErrorController
+页面错误转向控制器
+
+== 一些示例
+运行demon-admin 后,可访问下列路由。
+
+运行方法:
+
+* 1.IDE Project->右键->run as->Spring-boot-app
+* 2.DemonAdminApplication->右键->run as->Java application
+[source,java,indent=0]
+----
+	@SpringBootApplication
+	public class DemonAdminApplication {
+		public static void main(String[] args) throws Exception {
+			SpringApplication.run(DemonAdminApplication.class, args);
+		}
+	}
+----
+
+页面路由访问:
+
+* 后台首页: localhost:8080
+* 后台登录: localhost:8080/login
+* 后台管理:
+	- 列表: localhost:8080/list
+	- 编辑: localhost:8080/edit
+	- 新增: localhost:8080/add
+
+== 权限
+例子：当访问localhost:8080 会提示“您无权操作”；访问localhost:8080/set 后，相当于登录，
+并得到权限，此时在访问localhost:8080 即可观看到页面。
+
+执行dao下边的import.sql，会自动产生一个超级管理员账号：admin密码admin01
+
+[source,java,indent=0]
+----
+	@AdminAccess({AdminRole.ADMIN})
+	@RequestMapping("/")
+	public String welcome(AdminLoginer adminLoginValue,Map<String, Object> model) {
+		model.put("time", new Date());
+		model.put("message", this.message);
+		logger.info("adminLoginValue=>"+adminLoginValue);
+		return "welcome";
+	}
+	
+	@RequestMapping("/set")
+	public String welcomea(HttpSession httpSession,Map<String, Object> model) {
+		UserPlatform userPlatform = new UserPlatform();
+		userPlatform.setId(1L);
+		userPlatform.setLoginUsername("hahha");
+		userPlatform.setRole(AdminRole.ADMIN);
+		AdminCookie.setLoginAdmin(httpSession, userPlatform);
+		return "welcome";
+	}
+----
+
+== 异常
+全局配置异常
+
+> 异常捕获
+[source,java,indent=0]
+----
+@ControllerAdvice
+public class DemonAdminExceptionHandler {
+	String DEFAULT_ERROR_VIEW = "error/exception"; // 异常页面
+
+    @ExceptionHandler(value = Exception.class)
+	public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("exception", e);  
+		mav.setViewName(DEFAULT_ERROR_VIEW);
+		return mav;
+	}
+}
+----
+
+> 异常输出页面
+[source,html,indent=0]
+----
+#set( $layout = 'layout/bank.html' )
+发生异常:$!exception，请通知管理员.
+----
+
+== 分页
+例子：
+
+> Controller
+
+[source,java,indent=0]
+----
+    @RequestMapping(value="/userPlatform/list", method=RequestMethod.GET)
+	public String userPlatformList(@RequestParam(value="page",defaultValue="1") int page, Model model) {
+		Page<UserPlatform> userPlatforms = userPlatformService.findAll(page - 1, pageSize);
+		model.addAttribute("userPlatforms", userPlatforms);
+		return "/userPlatform/list";
+	}
+----
+
+> template/userPlatform/list.html:
+
+[source,html,indent=0]
+----
+    <div>
+    	#pager("/manager/userPlatform/list" $userPlatforms)
+	</div>
+----
+
+> template/global_library.vm:
+
+[source,vm,indent=0]
+----
+#macro(pager $url $pager)
+<ul class="pagination">
+    #set($FRONT_LEN = 4)
+    #set($BEHIND_LEN = 5)
+    #set($PAGER_LEN = 10)
+    #set($PAGER_CENTER = $!{P_TOTALPAGES} - $!{BEHIND_LEN})
+    #set($P_NUMBER = $!{pager.number} + 1)
+    #set($P_TOTALPAGES = $!{pager.totalPages})
+    <li #if($!{P_NUMBER} == 1) class="disabled"#end>
+        <a href="$!{url}?page=1">&laquo;</a>
+    </li>
+    #if($!{P_TOTALPAGES} <= $!{PAGER_LEN})
+        #foreach($p in [1..$!{P_TOTALPAGES}])
+            <li #if($!{P_NUMBER} == $!{p}) class="active" #end>
+                <a href="$!{url}?page=$!{p}">$!{p}</a>
+            </li>
+        #end
+    #elseif($!{P_TOTALPAGES} > $!{PAGER_LEN})
+        #if($!{P_NUMBER} <= $!{FRONT_LEN})
+            #foreach($p in [1..10])
+                <li #if($!{P_TOTALPAGES} == $!{p}) class="active" #end>
+                    <a href="$!{url}?page=$!{p}">$!{p}</a>
+                </li>
+            #end
+        #elseif($!{P_NUMBER} < $!{PAGER_CENTER})
+            #set($header = $!{P_NUMBER} - $!{FRONT_LEN})
+            #set($ender = $!{P_NUMBER} + $!{BEHIND_LEN})
+            #foreach($p in [$!{header}..$!{ender}])
+                <li #if($!{P_NUMBER} == $!{p}) class="active" #end>
+                    <a href="$!{url}?page=$!{p}">$!{p}</a>
+                </li>
+            #end
+        #else
+            #set($begin = $!{P_TOTALPAGES} - $!{FRONT_LEN} - $!{BEHIND_LEN})
+            #foreach($p in [$!{begin}..$!{P_TOTALPAGES}])
+                <li #if($!{P_NUMBER} == $!{p}) class="active" #end>
+                    <a href="$!{url}?page=$!{p}">$!{p}</a>
+                </li>
+            #end
+        #end
+    #end
+    <li #if($!{P_NUMBER} == $!{P_TOTALPAGES}) class="disabled"#end>
+        <a href="$!{url}?page=$!{P_TOTALPAGES}">&raquo;</a>
+    </li>
+</ul>
+#end
+----
+
+== 部署
+1.更新代码。2.部署代码。
+
+* 连接远程机器ssh dev@120.26.84.59
+* 进入工程目录cd ~/application/flx, git pull更新代码
+* 执行部署脚本sh deploy-#-#.sh,第一个#表示环境[dev是本地环境，pro是线下环境]，
+第二个#表示启动的项目如web，即为flx-web工程。
+

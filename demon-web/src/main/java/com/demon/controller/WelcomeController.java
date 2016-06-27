@@ -19,18 +19,26 @@ package com.demon.controller;
 import java.util.Date;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class WelcomeController {
+	private static final Logger logger = LoggerFactory.getLogger(WelcomeController.class);
+
 
 	@Value("${application.message:Hello World}")
 	private String message = "Hello World";
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
+//		System.out.println("===============");
+//		System.out.println("Message=>"+this.message);
+//		System.out.println("===============");
+		logger.info("Hello "+ this.message);
 		model.put("time", new Date());
 		model.put("message", this.message);
 		return "welcome";
